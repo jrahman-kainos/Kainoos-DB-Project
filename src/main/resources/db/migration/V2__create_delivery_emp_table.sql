@@ -1,0 +1,7 @@
+CREATE TABLE delivery (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    bank_acc_num VARCHAR(50) NOT NULL UNIQUE,
+    nat_ins_num VARCHAR(20) NOT NULL UNIQUE
+);
