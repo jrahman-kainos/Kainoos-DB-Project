@@ -5,3 +5,5 @@ CREATE TABLE delivery (
     bank_account_number VARCHAR(32) NOT NULL UNIQUE CHECK (bank_account_number <> ""),
     national_insurance_number VARCHAR(32) NOT NULL UNIQUE CHECK (national_insurance_number <> ""),
 );
+
+GRANT USAGE, SELECT, INSERT ON Kainoos_Prod_JawadurR.delivery TO 'hr_legends'@'%';
