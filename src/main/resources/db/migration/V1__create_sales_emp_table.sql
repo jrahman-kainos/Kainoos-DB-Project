@@ -1,8 +1,8 @@
 CREATE TABLE sales (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    name varchar(100) NOT NULL,
-    salary decimal(10, 2) NOT NULL,
-    bank_acc_num varchar(50) NOT NULL UNIQUE,
-    nat_ins_num varchar(20) NOT NULL UNIQUE,
-    comm_rate decimal(5, 2) NOT NULL
+    name VARCHAR(64) NOT NULL CHECK (name <> ""),
+    salary DECIMAL(16, 2) NOT NULL CHECK (salary >= 0),
+    bank_account_number VARCHAR(32) NOT NULL UNIQUE CHECK (bank_account_number <> ""),
+    national_insurance_number VARCHAR(32) NOT NULL UNIQUE CHECK (national_insurance_number <> ""),
+    commission_rate DECIMAL(8, 2) NOT NULL CHECK (commission_rate >= 0)
 );
