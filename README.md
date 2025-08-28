@@ -2,7 +2,7 @@
 
 Database Migration - Local
 ---
-
+hello
 1. Add your SQL script to `resources.db.migration` directory
 2. Add the following lines to your ~/.zshrc file:
 
